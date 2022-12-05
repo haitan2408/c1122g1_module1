@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /* bài toán dưới dùng để tính điểm trung bình 3 môn: Math, English và Bio.
+    Hiển thị kết quả bằng alert
+    Câu lệnh bên dưới dùng để nhập điểm Toán
+    dấu + bên dưới dùng để chuyển từ văn bản/chuỗi => số
+    */
+    let math = +prompt("Mời bạn nhập điểm toán: ");
+    let english = +prompt("Mời bạn nhập điểm Anh: ");
+    let bio = +prompt("Mời bạn nhập điểm Sinh: ");
+    alert(math + "," + english + "," + bio)
+    let avg = (math + english + bio) / 3
+    alert(avg)
+    alert("Điểm trung bình là " + avg);
+</script>
+</body>
+</html>
