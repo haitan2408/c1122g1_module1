@@ -5,34 +5,69 @@
     <title>Title</title>
 </head>
 <body>
+Nhập tháng muốn kiểm tra: <input type="month" id="month">
+<button onclick="checkMonth()">Kiểm tra</button>
 <script>
-    let month = +prompt("MỜi bạn nhập tháng muốn kiểm tra: ");
-    switch (month) {
-        case 1:
+    // let month = +prompt("MỜi bạn nhập tháng muốn kiểm tra: ");
+    // switch (month) {
+    //     case 1:
+    //     case 3:
+    //     case 5:
+    //     case 7:
+    //     case 8:
+    //     case 10:
+    //     case 12:
+    //         console.log("31");
+    //         break;
+    //     case 2:
+    //         let year = prompt("Mời bạn nhập năm kiểm tra: ");
+    //         if (year % 400 === 0 || (year % 100 !== 0 && year % 4 === 0) ) {
+    //             console.log("29 ngày")
+    //         } else {
+    //             console.log("28 ngày")
+    //         }
+    //         break;
+    //     case 4:
+    //     case 6:
+    //     case 9:
+    //     case 11:
+    //         console.log("30")
+    //         break;
+    //     default:
+    //         console.log("Người dùng nhập sai")
+    // }
+    function checkMonth() {
+        //yyyy-MM
+        let value = document.getElementById("month").value;
+//cắt lấy cái chuỗi value từ vị trí số 5 đến trước vị trí số 7. => lấy được month
+        let month = +value.slice(5, 7);
+        switch (month) {
+            case 1:
             case 3:
-        case 5:
-        case 7:
-        case 8:
-        case 10:
-        case 12:
-            console.log("31");
-            break;
-        case 2:
-            let year = prompt("Mời bạn nhập năm kiểm tra: ");
-            if (year % 400 === 0 || (year % 100 !== 0 && year % 4 === 0) ) {
-                console.log("29 ngày")
-            } else {
-                console.log("28 ngày")
-            }
-            break;
-        case 4:
-        case 6:
-        case 9:
-        case 11:
-            console.log("30")
-            break;
-        default:
-            console.log("Người dùng nhập sai")
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                console.log("31");
+                break;
+            case 2:
+                let year = +value.slice(0,4);
+                if (year % 400 === 0 || (year % 100 !== 0 && year % 4 === 0)) {
+                    console.log("29 ngày")
+                } else {
+                    console.log("28 ngày")
+                }
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                console.log("30")
+                break;
+            default:
+                console.log("Người dùng nhập sai")
+        }
     }
 </script>
 </body>
