@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //c1:
+    // let students = ["Hải", "Liêm", "Duyên", 12];
+    // document.write(students);
+
+    //c2:
+    // let students = new Array(5)
+    // document.write(students)
+    // let point;
+    // let students = ["Hải", "Liêm", "Duyên"];
+    // for (let i = 0; i < students.length; i++) {
+    //     point = prompt("Mời bạn nhập điểm cho bạn " + students[i]);
+    //     if (point > 8) {
+    //         alert("Giỏi")
+    //     }
+    // }
+
+    // let point;
+    // let students = ["Hải", "Liêm", "Duyên"];
+    // for (let i in students) {
+    //     point = prompt("Mời bạn nhập điểm cho bạn " + students[i]);
+    //     if (point > 8) {
+    //         alert("Giỏi")
+    //     }
+    // }
+
+    // let point;
+    // let students = ["Hai", "Liêm", "Duyên"];
+    //thêm vào cuối
+    // students.push("HaiTT");
+
+    //thêm vào đầu
+    // students.unshift("haiTT")
+
+    //Thêm vị trí bất kỳ
+    // students.splice(2, 0, "HaiTT")
+
+    // Xóa ở cuối mảng
+    // students.pop();
+
+    //Xóa đầu mảng
+    // students.shift()
+
+    //Xóa vị trí bất kỳ
+    // students.splice(1,2);
+    // students.sort();
+    // for (let element of students) {
+    //     point = prompt("Mời bạn nhập điểm cho bạn " + element);
+    //     if (point > 8) {
+    //         alert("Giỏi")
+    //     }
+    // }
+
+    // let students = [["HaiTT",19,"hai.truong@codegym.vn"], ["TrungDP","trung.d", 25]];
+
+    // let students = new Array(2);
+    // for(let i = 0; i<students.length; i++) {
+    //     students[i] = new Array("haiTT", 19);
+    // }
+
+    // for(let i = 0; i< students.length; i++) {
+    //     for(let j = 0; j < students[i].length; j++) {
+    //         alert(students[i][j])
+    //     }
+    // }
+
+    let numbers = [1, 2, 11, 23, 4];
+    numbers.sort(function (a, b) {
+        return a - b;
+    });
+    document.write(numbers)
+</script>
+</body>
+</html>
