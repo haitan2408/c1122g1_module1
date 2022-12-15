@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="diCho('Thịt, rau')">Đi chợ</button>
+<script>
+    // function diCho(danhSach) {
+    //     xinTien();
+    //     alert("Đi chợ");
+    //     alert("Trả giá")
+    //     alert("Đi về.")
+    // }
+    //
+    // function diChoiGame() {
+    //     xinTien();
+    //     alert("Đi chơi game")
+    // }
+    //
+    // function xinTien() {
+    //     alert("Đi theo 30ph")
+    //     let money = prompt("Vợ cho tiền:");
+    // }
+
+    // diCho();
+
+    //Hiển thị danh sách số nguyên tố nhỏ hơn 100
+    for (let number = 2; number <= 100; number++) {if(isPrime(number)) {
+         console.log(number + " ");
+       }
+    }
+
+    //Kiểm tra 1 số num bất kỳ có phải là số nguyên tố hay không
+    let number = prompt("Mời bạn nhập số cần kiểm tra");
+    isPrime(number);
+    document.write()
+
+   function isPrime(number) {
+       for (let i = 2; i <= Math.sqrt(number); i++) {
+           if (number % i == 0) {
+              return false
+           }
+       }
+       return true;
+   }
+</script>
+</body>
+</html>
