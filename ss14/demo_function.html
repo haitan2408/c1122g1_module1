@@ -27,15 +27,12 @@
     // diCho();
 
     //Hiển thị danh sách số nguyên tố nhỏ hơn 100
-    for (let number = 2; number <= 100; number++) {if(isPrime(number)) {
+    for (let number = 2; number <= 100; number++) {
+        if(isPrime(number)) {
          console.log(number + " ");
        }
     }
 
-    //Kiểm tra 1 số num bất kỳ có phải là số nguyên tố hay không
-    let number = prompt("Mời bạn nhập số cần kiểm tra");
-    isPrime(number);
-    document.write()
 
    function isPrime(number) {
        for (let i = 2; i <= Math.sqrt(number); i++) {
