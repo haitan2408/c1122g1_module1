@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="rectangle"
+        style="width: 70%;height:70%;background-color: lightseagreen;border: 1px solid lightseagreen"></canvas>
+<script>
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        getLength() {
+            return this.length;
+        }
+
+        getWith() {
+            return this.width;
+        }
+
+        setLength(length) {
+            this.length = length;
+        }
+
+        setWith(width) {
+            this.width = width;
+        }
+
+        area() {
+            return (this.width) * (this.length);
+        }
+
+        perimeter() {
+            return (this.width + this.length) * 2;
+        }
+    }
+
+    let myRectangle = new Rectangle(+prompt("nhập vào chiều dài"), +prompt("nhập vào chiều rộng"));
+    let length = myRectangle.getLength();
+    console.log(length);
+    let width = myRectangle.getWith();
+    let dienTich = myRectangle.area();
+    document.write("Diện tích hình chữ nhật là: " + dienTich + " m2" + '<br>');
+    let chuVi = myRectangle.perimeter();
+    document.write("Chu vi hình chữ nhật là: " + chuVi + " m");
+    myRectangle.setLength(length);
+    myRectangle.setWith(width);
+
+    let canvas = document.getElementById("rectangle");
+    let ctx = canvas.getContext("2d");
+
+    let grd = ctx.createLinearGradient(0, 0, length, 0);
+    grd.addColorStop(0, "black");
+    grd.addColorStop("0.2", "magenta");
+    grd.addColorStop("0.4", "blue");
+    grd.addColorStop("0.6", "green");
+    grd.addColorStop("0.8", "yellow");
+    grd.addColorStop(1, "red");
+
+    ctx.fillStyle = grd;
+    ctx.fillRect(20, 20, length, width);
+
+</script>
+</body>
+</html>
